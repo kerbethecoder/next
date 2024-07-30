@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/next',
+  basePath: process.env.NODE_ENV === 'production' ? '/sveltekit' : '',
   output: 'export', // <=== enables static exports
   reactStrictMode: true,
 };
